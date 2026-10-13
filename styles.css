@@ -230,3 +230,128 @@ nav .nav-cta { color: var(--accent); font-weight: 700; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* ============================================================
+   MULTI-PAGE ADDITIONS
+   ============================================================ */
+
+/* Highlights the current page in the menu */
+nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+nav .nav-cta[aria-current="page"] { color: var(--accent); }
+
+/* Intro block at the top of inner pages */
+.page-intro { padding-block: 48px 8px; }
+
+/* Two columns: a heading on the left, text on the right. Stacks on phones. */
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 40px;
+  align-items: start;
+}
+.split > * { min-width: 0; }
+
+.more { margin-top: 20px; }
+
+/* Call-to-action band near the bottom of pages */
+.contact-band {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  margin-bottom: 48px;
+  padding: 40px 28px;
+}
+
+/* Service detail rows */
+.service-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 40px;
+  border-top: 1px solid var(--line);
+}
+.service-detail .price { font-weight: 700; color: var(--accent); }
+
+/* Checkmark lists */
+.checklist { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.checklist li { padding-left: 30px; position: relative; }
+.checklist li::before {
+  content: ""; position: absolute; left: 4px; top: 4px;
+  width: 7px; height: 13px;
+  border: solid var(--accent); border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Numbered process steps */
+.steps {
+  list-style: none; padding: 0; margin: 0;
+  counter-reset: step;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+.steps li { counter-increment: step; border-top: 3px solid var(--accent); padding-top: 14px; }
+.steps li::before {
+  content: counter(step);
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+.steps strong { display: block; font-size: 1.1rem; }
+.steps span { color: var(--muted); }
+
+/* Experience timeline */
+.timeline { list-style: none; padding: 0; margin: 0; display: grid; gap: 24px; }
+.timeline li { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 20px; }
+.timeline .when { color: var(--muted); font-variant-numeric: tabular-nums; font-weight: 500; }
+.timeline p { color: var(--muted); margin: 4px 0 0; }
+
+/* Blog post cards */
+.post-list { display: grid; gap: 16px; }
+.post-card {
+  display: grid;
+  gap: 6px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px;
+  text-decoration: none;
+  color: var(--ink);
+  max-width: 760px;
+}
+.post-card:hover { border-color: var(--accent); }
+.post-meta { color: var(--muted); font-size: 0.9rem; }
+.post-title { font-family: var(--font-display); font-size: 1.5rem; line-height: 1.2; }
+.post-excerpt { color: var(--muted); }
+
+/* A single blog post: narrow column for comfortable reading */
+.post { max-width: 720px; margin-inline: auto; padding-inline: 20px; padding-block: 48px; }
+.post-header { margin-bottom: 32px; }
+.post-header .eyebrow a { color: inherit; }
+.prose { font-size: 1.1rem; }
+.prose h2 { margin-top: 1.8em; font-size: 1.6rem; }
+.prose ul, .prose ol { padding-left: 1.3em; display: grid; gap: 8px; margin: 0 0 1em; }
+.pull {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  line-height: 1.3;
+  border-left: 4px solid var(--highlight);
+  padding-left: 18px;
+}
+.author-box {
+  margin-top: 48px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.big-link { font-size: 1.3rem; font-weight: 700; overflow-wrap: anywhere; }
+
+.site-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-top: 1px solid var(--line); }
+.site-footer nav a { color: var(--muted); }
+
+@media (max-width: 720px) {
+  .split, .service-detail { grid-template-columns: 1fr; gap: 16px; }
+  .timeline li { grid-template-columns: 1fr; gap: 4px; }
+}
