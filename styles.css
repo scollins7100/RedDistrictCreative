@@ -355,3 +355,83 @@ nav .nav-cta[aria-current="page"] { color: var(--accent); }
   .split, .service-detail { grid-template-columns: 1fr; gap: 16px; }
   .timeline li { grid-template-columns: 1fr; gap: 4px; }
 }
+
+/* ============================================================
+   CASE STUDIES
+   ============================================================ */
+.post.case { max-width: 860px; }
+.post.case .prose { max-width: 720px; }
+
+/* Quick facts row */
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 0 0 24px; }
+.facts div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.facts dt { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 700; }
+.facts dd { margin: 4px 0 0; font-weight: 500; }
+.post.case .stats { margin-bottom: 32px; }
+
+/* "How it connects" flow diagram */
+.flow {
+  margin: 24px 0 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 8px;
+}
+.flow-step {
+  flex: 1 1 140px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  display: grid;
+  gap: 4px;
+  align-content: start;
+}
+.flow-step b { font-family: var(--font-display); font-size: 1.05rem; }
+.flow-step span { font-size: 0.9rem; color: var(--muted); }
+.flow-step.accent { border: 2px solid var(--accent); }
+.flow-arrow { align-self: center; font-size: 1.4rem; color: var(--accent); font-weight: 700; }
+
+/* Data tables */
+.scroll { overflow-x: auto; margin: 16px 0; }
+table.data {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+}
+table.data th, table.data td { padding: 10px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+table.data th { font-size: 0.8rem; color: var(--muted); background: var(--bg); }
+.src { font-size: 0.85rem; color: var(--muted); }
+
+/* Up / down chips */
+.chip { display: inline-block; font-size: 0.8rem; font-weight: 700; border-radius: 999px; padding: 2px 9px; white-space: nowrap; }
+.chip.up { color: #1f6b43; background: #dff0e5; }
+.chip.down { color: #9a3d12; background: #f8e3d8; }
+.chip.flat { color: var(--muted); background: var(--line); }
+@media (prefers-color-scheme: dark) {
+  .chip.up { color: #8fd6aa; background: #1d3527; }
+  .chip.down { color: #f2a47c; background: #3a2418; }
+}
+
+/* Simple bar chart built from CSS */
+.chart-figure { margin: 24px 0; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+.chart-figure figcaption { display: grid; gap: 2px; margin-bottom: 14px; }
+.chart-figure figcaption span { font-size: 0.85rem; color: var(--muted); }
+.bars { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 8px; align-items: end; height: 200px; }
+.bars div { display: grid; grid-template-rows: auto 1fr auto; align-items: end; justify-items: center; height: 100%; gap: 4px; }
+.bars i { display: block; width: 70%; max-width: 44px; height: calc(var(--v) / 12 * 140px); background: var(--accent); border-radius: 4px 4px 0 0; }
+.bars .after i { background: var(--line); }
+.bars span { font-weight: 700; font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+.bars em { font-style: normal; font-size: 0.75rem; color: var(--muted); white-space: nowrap; }
+.legend-line { margin: 12px 0 0; font-size: 0.85rem; color: var(--muted); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; background: var(--accent); }
+.key.after { background: var(--line); margin-left: 10px; }
+
+@media (max-width: 720px) {
+  .flow-arrow { display: none; }
+  .bars em { font-size: 0.65rem; }
+}
