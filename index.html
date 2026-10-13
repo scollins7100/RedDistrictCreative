@@ -1,27 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- The <head> holds info for browsers and search engines. Visitors don't see it. -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- SEO basics: the title shows in Google results and browser tabs (aim for under 60 characters) -->
   <title>Red District Creative | Local Search &amp; Digital Marketing, Dayton OH</title>
-  <!-- The meta description is the gray text under your link in Google (aim for 150 to 160 characters) -->
   <meta name="description" content="Red District Creative is a Dayton marketing studio helping local businesses get found on Google. Google Business Profile, website SEO, email marketing and social media.">
-  <!-- Canonical URL: tells Google which address is the "official" one for this page -->
   <link rel="canonical" href="https://scollins7100.github.io/RedDistrictCreative/">
-
-  <!-- Fonts from Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Karla:wght@400;500;700&display=swap">
-
-  <!-- Your stylesheet: all the colors, fonts and layout live in this one file -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Schema markup: structured data that tells Google exactly who you are and what you offer.
-       This is the same skill employers ask for in SEO roles. -->
+  <!-- Schema markup: tells Google who the business is -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,7 +22,7 @@
     "founder": {
       "@type": "Person",
       "name": "Stephanie Collins",
-      "jobTitle": "Local Search & Digital Marketing Strategist",
+      "jobTitle": "Founder and Marketing Strategist",
       "alumniOf": ["The Ohio State University", "Miami University"]
     },
     "areaServed": { "@type": "City", "name": "Dayton, Ohio" },
@@ -41,32 +30,31 @@
   }
   </script>
 </head>
-
 <body>
+  <!-- HEADER: the same block is copied onto every page. aria-current marks the page you're on. -->
   <header class="site-header">
-    <a class="brand" href="#top">Red District Creative</a>
+    <a class="brand" href="./">Red District Creative</a>
     <nav aria-label="Main">
-      <a href="#services">Services</a>
-      <a href="#results">Results</a>
-      <a href="#about">About</a>
-      <a class="nav-cta" href="#contact">Contact</a>
+      <a href="./" aria-current="page">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="blog/">Blog</a>
+      <a class="nav-cta" href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main id="top">
-    <!-- HERO: the first thing people see. One clear sentence about what you do and for whom. -->
+  <main>
     <section class="hero">
       <p class="eyebrow">Dayton, Ohio · Local search &amp; digital marketing</p>
       <h1>Helping local businesses get found, chosen and remembered.</h1>
       <p class="lede">I'm Stephanie Collins, founder of Red District Creative and a marketing strategist with 13 years of experience. I help small businesses show up on Google, turn website visitors into customers, and stay in touch through email and social media.</p>
       <div class="hero-actions">
-        <a class="button" href="#contact">Get a free Google profile check</a>
-        <a class="button button-quiet" href="#services">See services</a>
+        <a class="button" href="contact.html">Get a free Google profile check</a>
+        <a class="button button-quiet" href="services.html">See services</a>
       </div>
     </section>
 
-    <!-- RESULTS: real numbers from your resume. Numbers build trust faster than adjectives. -->
-    <section id="results" class="results" aria-labelledby="results-title">
+    <section class="results" aria-labelledby="results-title">
       <h2 id="results-title" class="visually-hidden">Results</h2>
       <ul class="stats">
         <li><strong>+44%</strong><span>search visibility after a website and SEO rebuild</span></li>
@@ -76,8 +64,20 @@
       </ul>
     </section>
 
-    <!-- SERVICES: what you sell. Edit the prices any time. -->
-    <section id="services" class="section" aria-labelledby="services-title">
+    <!-- HOW I WORK: sets expectations before anyone hires you -->
+    <section class="section split" aria-labelledby="how-title">
+      <div>
+        <p class="eyebrow">How I work</p>
+        <h2 id="how-title">You own the goals. I own the strategy.</h2>
+      </div>
+      <div>
+        <p>You know your business better than anyone. Tell me where you want it to go: more booked appointments, a stronger spring season, a second location that people can actually find.</p>
+        <p>Then let me do what you hired me for. I build the plan, run it, measure it, and report back every month in plain language. You hold me accountable to results. I don't run on last minute ideas, and you never have to wonder what your marketing is doing.</p>
+        <a href="blog/reactions-are-not-a-marketing-plan.html">Read why this matters →</a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="services-title">
       <h2 id="services-title">Services</h2>
       <div class="cards">
         <article class="card featured">
@@ -88,41 +88,38 @@
         </article>
         <article class="card">
           <h3>Website SEO Check-Up</h3>
-          <p>A review of your WordPress, Webflow or Shopify site: page titles, descriptions, speed, Search Console setup and the fixes that matter most, done for you.</p>
+          <p>A review of your WordPress, Webflow or Shopify site with the fixes that matter most, done for you.</p>
           <p class="price">Quote on request</p>
         </article>
         <article class="card">
           <h3>Email &amp; Social Setup</h3>
-          <p>Email welcome series and seasonal campaigns in Klaviyo, plus a simple monthly social calendar scheduled and reported through Metricool.</p>
+          <p>A Klaviyo welcome series and seasonal campaigns, plus a monthly social calendar planned ahead of time.</p>
           <p class="price">Quote on request</p>
         </article>
       </div>
+      <p class="more"><a href="services.html">Full service details →</a></p>
     </section>
 
-    <!-- ABOUT: short and human. People hire people. -->
-    <section id="about" class="section about" aria-labelledby="about-title">
-      <div>
-        <h2 id="about-title">About me</h2>
-        <p>I've led marketing for a garden center and landscaping company, a mixed use shopping destination, a dental practice and a construction consulting firm. I also worked in communications at Wright State University and The Ohio State University.</p>
-        <p>I like work I can measure. I set up the tracking first, make the change, and show you what moved. I hold a Master of Science from The Ohio State University.</p>
-      </div>
-      <ul class="tools" aria-label="Tools I use">
-        <li>Google Business Profile</li><li>GA4</li><li>Search Console</li>
-        <li>WordPress</li><li>Webflow</li><li>Shopify</li>
-        <li>Klaviyo</li><li>Metricool</li><li>Canva</li>
-      </ul>
+    <!-- LATEST POST: update this when you publish a new one -->
+    <section class="section" aria-labelledby="blog-title">
+      <h2 id="blog-title">From the blog</h2>
+      <a class="post-card" href="blog/reactions-are-not-a-marketing-plan.html">
+        <span class="post-meta">Opinion · October 13, 2026</span>
+        <span class="post-title">Reactions Are Not a Marketing Plan</span>
+        <span class="post-excerpt">The 4:45 PM "can we post about this tomorrow?" message is costing small businesses more than they think. Here's the deal that actually works.</span>
+      </a>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Let's talk</h2>
-      <p>Tell me your business name and I'll send a free, no-pressure look at your Google Business Profile within two days.</p>
-      <a class="button" href="mailto:scollins7100@gmail.com?subject=Free%20Google%20profile%20check">scollins7100@gmail.com</a>
+    <section class="section contact-band" aria-labelledby="cta-title">
+      <h2 id="cta-title">Want to know how you look on Google?</h2>
+      <p>Send me your business name and I'll send back a free, no-pressure look at your Google Business Profile within two days.</p>
+      <a class="button" href="contact.html">Get your free check</a>
     </section>
   </main>
 
   <footer class="site-footer">
     <p>© 2026 Red District Creative LLC · Dayton, Ohio</p>
+    <nav aria-label="Footer"><a href="services.html">Services</a> <a href="about.html">About</a> <a href="blog/">Blog</a> <a href="contact.html">Contact</a></nav>
   </footer>
 </body>
 </html>
