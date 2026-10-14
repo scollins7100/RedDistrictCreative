@@ -442,3 +442,26 @@ table.data th { font-size: 0.8rem; color: var(--muted); background: var(--bg); }
 .role.mine { border: 2px solid var(--accent); }
 .role h3 { margin-bottom: 12px; }
 .note-line { margin-top: 16px; padding: 12px 14px; border-left: 4px solid var(--highlight); background: var(--surface); }
+
+/* ============================================================
+   PACKAGES: monthly plan tiers
+   ============================================================ */
+.tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; align-items: stretch; }
+.tier { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px; }
+.tier.featured { border: 2px solid var(--accent); }
+.tier h3 { margin: 0; font-size: 1.4rem; }
+.tier-price { font-family: var(--font-display); font-size: 2.4rem; margin: 0; color: var(--accent); font-variant-numeric: tabular-nums; }
+.tier-price span { font-family: var(--font-body); font-size: 1rem; color: var(--muted); }
+.tier-for { color: var(--muted); margin: 0 0 6px; }
+.tier .tag { margin: 0; }
+
+/* ============================================================
+   VALUES (About page): numbered list that grows over time
+   ============================================================ */
+.values-intro { color: var(--muted); }
+.values { list-style: none; counter-reset: value; padding: 0; margin: 24px 0 0; display: grid; gap: 18px; max-width: 760px; }
+.values li { counter-increment: value; position: relative; padding: 20px 22px 20px 72px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+.values li::before { content: counter(value, decimal-leading-zero); position: absolute; left: 22px; top: 18px; font-family: var(--font-display); font-size: 1.6rem; color: var(--accent); }
+.values h3 { margin: 0 0 6px; }
+.values p { margin: 0 0 8px; }
+.values .values-credit { font-size: 0.9rem; color: var(--muted); font-style: italic; margin: 0; }
