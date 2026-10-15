@@ -300,6 +300,8 @@ figure { margin: 0; }
 .portrait img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 60% center; }
 .home-photo { margin: 20px 0 0; }
 .home-photo img { object-position: 40% center; }
+.side-photo { margin: 16px 0 0; max-width: 320px; }
+.side-photo img { aspect-ratio: 4 / 5; object-position: center; }
 .case-hero { margin: 0 0 28px; border: 1px solid var(--line); }
 .case-hero img { width: 100%; }
 .gallery-block { margin: 40px 0; }
