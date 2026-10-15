@@ -298,6 +298,8 @@ img { max-width: 100%; height: auto; display: block; }
 figure { margin: 0; }
 .portrait { margin-bottom: 20px; border: 1px solid var(--line); background: var(--surface); padding: 8px; }
 .portrait img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 60% center; }
+.home-photo { margin: 20px 0 0; }
+.home-photo img { object-position: 40% center; }
 .case-hero { margin: 0 0 28px; border: 1px solid var(--line); }
 .case-hero img { width: 100%; }
 .gallery-block { margin: 40px 0; }
